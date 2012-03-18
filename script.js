@@ -1,3 +1,15 @@
+var hidden = 0;
+$('#frame').click(function() {
+  if (hidden === 1) {
+    $('#hideWrapper').animate({opacity: 1.0}, 500);
+    hidden = 0;
+  } else {
+    $('#hideWrapper').animate({opacity: 0.0}, 500);
+    hidden = 1;
+  }
+});
+
+
 function renderPlayPauseButton() {
   if(Player.playState() === 1) {
     $("#playPause").removeClass("play");
