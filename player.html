@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* RESET */
+    * {margin: 0; padding: 0;}
+ 
+    #noAlbumArt, #albumArt, #frame, #fakeFrame, #shade, #controls {
+      position: absolute;
+    }
+
+    /* LAYERS */
+    #noAlbumArt               {z-index: 0;}
+    #albumArt                 {z-index: 1;}
+    #shade                    {z-index: 2;}
+    #frame                    {z-index: 3;}
+    #bar, #trackInfo, #barCap {z-index: 4;}
+    #fakeFrame                {z-index: 5;}
+    
+    #albumArt, #noAlbumArt {
+      left: 8px;
+      top:  8px;
+    } 
+
+    #fakeFrame {
+      left: 3px;
+      top: 7px;
+    }
+
+    #shade {
+      margin: 8px 0 0 8px;
+      min-width: 100px;
+      min-height: 35px;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    #trackInfo {
+      background: transparent url(barCap.png) no-repeat top right;
+      margin-left: 3px; 
+      /* IMPORTANT */ top: 27px; 
+    }
+
+    #controls {
+      max-width: 100px;
+      min-width: 95px;
+      margin-left: 7px;
+      top: -2px;
+    }
+
+    #controls a {
+      float: left;
+      min-width: 17px;
+      min-height: 17px;
+    }
+
+    #back           { background: transparent url(back.png)    no-repeat 0 0 }
+    #playPause      { }
+    #forward        { background: transparent url(forward.png) no-repeat 0 0 }
+                      
+    .play           { background: transparent url(play.png)    no-repeat 0 0 }
+    .pause          { background: transparent url(pause.png)   no-repeat 0 0 }
+                      
+    div {
+      position: relative;
+      float: left;
+    }
+
+    div#trackInfo {
+      padding-right: 5px;
+    }
+
+    img {
+      float: left;
+    }
+    p {
+      color: #e8e8e8; 
+      font-family: "Helvetica Neue", HelviticaNeue, Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      letter-spacing: 1px;
+      font-size: 12px;
+    }
+    p#time {
+      float: right;
+      letter-spacing: normal;
+      font-weight: bold;
+      font-size: 14px;
+      text-shadow: /* Outline */
+        -1px -1px 0 rgba(0,0,0,0.8),
+        1px -1px 0  rgba(0,0,0,0.8),
+        -1px 1px 0  rgba(0,0,0,0.8),
+        1px 1px 0   rgba(0,0,0,0.8);
+    }
+    p#trackText {
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 400px;
+      text-overflow: ellipsis;
+      padding-left: 2px;
+      padding-right: 3px;
+      padding-top: 4px;
+      min-height: 25px;
+      float: left;
+      color: #aaa;
+      background: transparent url(barTile.png) repeat-x 0 0;
+    }
+    em {
+      letter-spacing: normal;
+      color: #ddd;
+      font-style: normal;
+      font-weight: normal;
+    }
+  </style>
+  <script src="jquery-1.7.1.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+
+
+<!-- PLAYER SKELETON -->
+<body>
+  <img id="fakeFrame" src="fakeFrame.png" />
+  <img id="noAlbumArt" src="blank.png" />
+  <img id="albumArt" />
+  <img id="frame" src="frame.png" />
+  <div id="hideWrapper">
+    <div id="shade"></div>
+    <div id="trackInfo">
+      <div id="controls">
+        <a id="back" onclick="Player.previousTrack(); return false;">&nbsp;</a>
+        <a id="playPause" onclick="Player.playPause(); return false;">&nbsp;</a>
+        <a id="forward"onclick="Player.nextTrack();return false;">&nbsp;</a>
+        <p id="time"></p>
+      </div>
+      <img id="bar" src="bar.png" />
+      <p id="trackText">
+        <em id="trackName">Nothing</em> by <em id="artistName">Nobody</em> on <em id="albumName">Nothing</em>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
