@@ -29,8 +29,9 @@ function playStateChanged(playState) {
   renderPlayPauseButton();
 
   // Hide album art when stopped
-  if (Player.playState() === 0) {
+  if (playState === 0) {
     $('#albumArt').hide();
+    $('#time').html("");
   } else {
     $('#albumArt').show();
   }  
