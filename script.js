@@ -9,6 +9,34 @@ $('#frame').click(function() {
   }
 });
 
+var light = false;
+$('#frame').dblclick(function () {
+  if (light === true) {
+    // change everything to dark
+    $("#trackInfo").css("background-image", "url(dark/barCap.png)");
+    $("p#trackText").css("background-image", "url(dark/barTile.png)");
+    $("#fakeFrame").attr("src", "dark/fakeFrame.png");
+    $("#frame").attr("src", "dark/frame.png");
+    $("#bar").attr("src", "dark/bar.png");
+
+    $("p#trackText").css("color", "#aaa");
+    $("em").css("color", "#ddd");
+
+    light = false;
+  } else {
+    // change everything to light
+    $("#trackInfo").css("background-image", "url(light/barCap.png)");
+    $("p#trackText").css("background-image", "url(light/barTile.png)");
+    $("#fakeFrame").attr("src", "light/fakeFrame.png");
+    $("#frame").attr("src", "light/frame.png");
+    $("#bar").attr("src", "light/bar.png");
+
+    $("p#trackText").css("color", "#292929");
+    $("em").css("color", "#292929");
+
+    light = true;
+  }
+});
 
 function renderPlayPauseButton() {
   if(Player.playState() === 1) {
