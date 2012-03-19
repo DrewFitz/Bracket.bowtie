@@ -36,7 +36,7 @@
     }
 
     #trackInfo {
-      background: transparent url(barCap.png) no-repeat top right;
+      background: transparent url(dark/barCap.png) no-repeat top right;
       margin-left: 3px; 
       /* IMPORTANT */ top: 27px; 
     }
@@ -54,12 +54,10 @@
       min-height: 17px;
     }
 
-    #back           { background: transparent url(back.png)    no-repeat 0 0 }
-    #playPause      { }
-    #forward        { background: transparent url(forward.png) no-repeat 0 0 }
-                      
-    .play           { background: transparent url(play.png)    no-repeat 0 0 }
-    .pause          { background: transparent url(pause.png)   no-repeat 0 0 }
+    #back                 { background: transparent url(back.png)         no-repeat 0 0 }
+    #forward              { background: transparent url(forward.png)      no-repeat 0 0 }
+    .play                 { background: transparent url(play.png)         no-repeat 0 0 }
+    .pause                { background: transparent url(pause.png)        no-repeat 0 0 }
                       
     div {
       position: relative;
@@ -67,7 +65,7 @@
     }
 
     div#trackInfo {
-      padding-right: 5px;
+      padding-right: 3px;
     }
 
     img {
@@ -102,7 +100,7 @@
       min-height: 25px;
       float: left;
       color: #aaa;
-      background: transparent url(barTile.png) repeat-x 0 0;
+      background: transparent url(dark/barTile.png) repeat-x 0 0;
     }
     em {
       letter-spacing: normal;
@@ -119,10 +117,10 @@
 
 <!-- PLAYER SKELETON -->
 <body>
-  <img id="fakeFrame" src="fakeFrame.png" />
+  <img id="fakeFrame" src="dark/fakeFrame.png" />
   <img id="noAlbumArt" src="blank.png" />
   <img id="albumArt" />
-  <img id="frame" src="frame.png" />
+  <img id="frame" src="dark/frame.png" />
   <div id="hideWrapper">
     <div id="shade"></div>
     <div id="trackInfo">
@@ -132,7 +130,7 @@
         <a id="forward"onclick="Player.nextTrack();return false;">&nbsp;</a>
         <p id="time"></p>
       </div>
-      <img id="bar" src="bar.png" />
+      <img id="bar" src="dark/bar.png" />
       <p id="trackText">
         <em id="trackName">Nothing</em> by <em id="artistName">Nobody</em> on <em id="albumName">Nothing</em>
       </p>
