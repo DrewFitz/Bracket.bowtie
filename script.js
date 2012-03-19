@@ -1,11 +1,11 @@
-var hidden = 0;
+var hidden = false;
 $('#frame').click(function() {
-  if (hidden === 1) {
+  if (hidden === true) {
     $('#hideWrapper').animate({opacity: 1.0}, 500);
-    hidden = 0;
+    hidden = false;
   } else {
     $('#hideWrapper').animate({opacity: 0.0}, 500);
-    hidden = 1;
+    hidden = true;
   }
 });
 
