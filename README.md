@@ -1,4 +1,4 @@
-# Vanilla Noir Theme
+# Bracket Theme
 
 For [Bowtie](http://bowtieapp.com)
 

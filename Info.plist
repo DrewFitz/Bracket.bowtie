@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>BTThemeName</key>
-      <string>Vanilla Noir</string>    
+      <string>Bracket</string>    
     <key>BTThemeVersion</key>
       <string>1.0</string>
 
@@ -15,7 +15,7 @@
     <key>BTThemePreviewImage</key>
       <string>preview.png</string>
     <key>BTThemeIdentifier</key>
-      <string>com.ChaseOros.VanillaNoir</string>
+      <string>com.ChaseOros.Bracket</string>
     <key>BTThemeDevice</key>
       <string>mac</string>
 
